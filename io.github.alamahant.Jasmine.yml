@@ -20,4 +20,9 @@ modules:
     sources:
       - type: git
         url: https://github.com/alamahant/Jasmine.git
-        tag: v1.0.0
+        tag: v1.0.1
+
+
+
+
+
