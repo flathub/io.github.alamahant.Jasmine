@@ -1,52 +1,46 @@
 # Changelog
 
-## Version 2.0.1 (2025-06-05)
-### Improvements
-- Changed degree display format from 0-360° decimal system to traditional in-sign degrees with minutes for improved astrological readability (e.g., 285.5° → 15°30' Capricorn)
-- Only House display shows both formats for reference
+## [v1.1.0] - 2025-06-12
 
-## Version 2.0.0 (2025-05-15)
-### Major Improvements
-- Completely rebuilt the calculation engine: removed Python dependency, virtual environment, flatlib, and all related scripts
-- Now using direct Swiss Ephemeris integration through native Qt/C++ code for significantly improved performance and reduced complexity
+- Implemented a new symlink-based storage system that dramatically reduces disk space usage
+- Profile data now uses symbolic links instead of copying entire directories, improving performance, speed and efficiency
+- Added progress bar when saving sessions for better visual feedback and to prevent premature closure
+- Implemented automatic cleanup of orphaned profile directories at startup (configurable in Tools menu)
+- Added Help Menu documentation explaining the new storage system benefits and recommendations
+- Performed minor code polishes
+---
 
-### New Features
-- Added an orb slider to set how many aspects are calculated and displayed
-- Added additional celestial bodies to be calculated and displayed:
-  - Black Moon Lilith
-  - Ceres
-  - Pallas
-  - Juno
-  - Vesta
-  - Vertex
-  - East Point
-  - Part of Spirit
-- Added a checkbox to toggle displaying additional bodies in the chart
-- Added Aspect Display Settings Dialog where users can customize the thickness and style of major and minor aspects
-- Added relationship charts functionality with Composite and Davison charts (synastry to be implemented in a future release)
+## [v1.0.1] - 2025-06-07
 
-### Performance Improvements
-- Preloaded OpenStreetMap QML at application startup to eliminate pause when opening the map dialog
+### Enhanced UI and functionality improvements
 
-### Changes
-- Updated license to AGPL-3 to conform with Swiss Ephemeris requirements (see credits.txt for full attribution)
+- Added fully functional URL bar with toggle visibility via eye icon in toolbar
+- New feature to create website cards directly from the currently loaded URL
+- Set dashboard to fixed size while keeping web view resizable for improved visual quality
+- Fixed website card update button connection to proper slot function
+- Improved theme handling for help menu items with temporary light theme switching
+- Fixed critical QWebEngineView resizing bugs affecting display and performance
+- Enhanced overall application layout with better size management
+- Changed App summary to "Launch websites and sessions" uncapitilized to conform with Flathub's Quality Guidelines
+- Changed default screenshot to "Main interface displaying organized bookmarks" which is a light theme screenshot to also conform with Flathub's Quality Guidelines
 
-## Version 1.1.0 (2025-04-30)
-### New Features
-- Added [OpenStreetMap](https://www.openstreetmap.org/) dialog to assist users in easily searching and setting their birth location
-- Expanded retrograde planet depiction beyond the planets drawn red on the chart itself and the tooltips, to also include the planet widgets, planet view, and aspects view
+---
 
-### Improvements
-- Made minor UI improvements for better usability
-- Added multiple screenshots to better showcase the application's features
-- Edited application summary to conform with Flathub quality guidelines
+## [v1.0.0] - 2025-06-01
 
-## Version 1.0.0 (2025-04-22)
-### Initial Release
-- Natal chart calculation and display
-- Aspect analysis
-- AI-powered interpretations
-- Transit calculations
+### Initial release of Jasmine Website and Session Manager
+
+- Website and session management with organized card-based interface
+- Complete session management with multi-tab restoration
+- Private profile system for isolated browsing environments
+- Multi-account support for simultaneous access to same services
+- Built-in download manager with progress tracking
+- Two-factor authentication (2FA) code generator
+- Screenshot capture functionality
+- Master password protection with SHA-256 encryption
+- Data management and privacy controls
+- Cross-platform Qt-based interface
+
 
 
 
