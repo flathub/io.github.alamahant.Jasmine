@@ -1,5 +1,27 @@
 # Changelog
 
+## [v1.2.3] - 2025-12-13
+
+### Updated Dependencies
+
+- **Runtime Update**: Updated the base runtime from org.kde.Platform version '6.8' to version '6.9'. This transition was necessary because version 6.8 has reached its End-of-Life (EOL).
+
+- **Base App Update**: Updated the base application from io.qt.qtwebengine.BaseApp version '6.8' to version '6.9' to maintain compatibility with the new platform runtime.
+
+---
+
+## [v1.2.2] - 2025-10-31
+
+### Bug Fixes and Improvements
+
+- **Custom Context Menu Implementation**: Subclassed QWebEnginePage and created a fully functional custom context menu with enhanced functionality and improved user experience.
+
+- **Consistent Profile Linking**: Ensured links opened from a tab share the same profile type as the calling tab, maintaining profile consistency across navigation and new tab operations.
+
+- **Code Polishes and Improvements**: Performed various code optimizations, refactoring, and maintenance improvements for better performance, stability, and maintainability.
+
+---
+
 ## [v1.2.1] - 2025-07-23
 
 ### Bug Fixes and Improvements
