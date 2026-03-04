@@ -1,8 +1,8 @@
 app-id: io.github.alamahant.Jasmine
 base: io.qt.qtwebengine.BaseApp
-base-version: '6.9'
+base-version: '6.10'
 runtime: org.kde.Platform
-runtime-version: '6.9'
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 command: Jasmine
 finish-args:
@@ -21,5 +21,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/alamahant/Jasmine.git
-        tag: v1.2.4
-        commit: 86cf49c15304801113a73a85301b28dc3f16148e
+        tag: v1.2.5
+        commit: 497c59cf0aab801ec72aa39e8bae84cb7e7f30f4
