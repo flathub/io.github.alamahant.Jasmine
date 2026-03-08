@@ -12,6 +12,7 @@ finish-args:
   - --device=dri
   - --share=network
   - --socket=pulseaudio
+  - --filesystem=xdg-documents/Jasmine:create
 modules:
   - name: jasmine
     buildsystem: cmake-ninja
@@ -21,5 +22,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/alamahant/Jasmine.git
-        tag: v1.2.5
-        commit: 497c59cf0aab801ec72aa39e8bae84cb7e7f30f4
+        tag: v1.2.6
+        commit: 49b370c77b851cac92e6a010b2f44812a151408c
