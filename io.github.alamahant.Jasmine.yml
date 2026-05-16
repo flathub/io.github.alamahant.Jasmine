@@ -13,6 +13,13 @@ finish-args:
   - --share=network
   - --socket=pulseaudio
   - --filesystem=xdg-documents/Jasmine:create
+cleanup:
+  - /include
+  - /lib/*/cmake
+  - /lib/cmake
+  - /mkspecs
+cleanup-commands:
+  - /app/cleanup-BaseApp.sh
 modules:
   - name: jasmine
     buildsystem: cmake-ninja
