@@ -21,6 +21,17 @@ cleanup:
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
 modules:
+  - name: yt-dlp
+    buildsystem: simple
+    build-commands:
+      - install -D yt-dlp /app/bin/yt-dlp
+      - chmod +x /app/bin/yt-dlp
+    sources:
+      - type: file
+        url: https://github.com/yt-dlp/yt-dlp/releases/download/2026.03.17/yt-dlp_linux
+        sha256: c2b0189f581fe4a2ddd41954f1bcb7d327db04b07ed0dea97e4f1b3e09b5dd8e
+        dest-filename: yt-dlp
+
   - name: jasmine
     buildsystem: cmake-ninja
     config-opts:
@@ -29,5 +40,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/alamahant/Jasmine.git
-        tag: v1.2.7
-        commit: df9e11242e254474fc10d7afb1d297a72618a57a
+        tag: v1.2.8
+        commit: 8c068b64d9c28e2a1f125aa493fafb973487353f
