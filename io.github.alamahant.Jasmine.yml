@@ -29,9 +29,14 @@ modules:
     sources:
       - type: file
         url: https://github.com/yt-dlp/yt-dlp/releases/download/2026.03.17/yt-dlp_linux
+        only-arches: [x86_64]
         sha256: c2b0189f581fe4a2ddd41954f1bcb7d327db04b07ed0dea97e4f1b3e09b5dd8e
         dest-filename: yt-dlp
-
+      - type: file
+        url: https://github.com/yt-dlp/yt-dlp/releases/download/2026.03.17/yt-dlp_linux_aarch64
+        only-arches: [aarch64]
+        sha256: 6bfa19736181da9e2e066f9c767da2f24fdcc5e148fa5034d1feb09132f89ad5
+        dest-filename: yt-dlp
   - name: jasmine
     buildsystem: cmake-ninja
     config-opts:
@@ -40,5 +45,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/alamahant/Jasmine.git
-        tag: v1.2.9
-        commit: 4235b5057ee7a27962b825120cda2f829f54e541
+        tag: v1.3.0
+        commit: 433622abed89a501d3ac3def5f17d3bc76b4983b
