@@ -45,5 +45,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/alamahant/Jasmine.git
-        tag: v1.3.1
-        commit: 1d5ec465131ab0ab212f7b9f6003a7245aa64bac
+        tag: v1.3.2
+        commit: fe38b42f5eb616406a7cc043d278f5e8cf224323
