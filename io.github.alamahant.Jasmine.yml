@@ -28,15 +28,32 @@ modules:
       - chmod +x /app/bin/yt-dlp
     sources:
       - type: file
-        url: https://github.com/yt-dlp/yt-dlp/releases/download/2026.03.17/yt-dlp_linux
+        url: https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp_linux
         only-arches: [x86_64]
-        sha256: c2b0189f581fe4a2ddd41954f1bcb7d327db04b07ed0dea97e4f1b3e09b5dd8e
+        sha256: 58162f9bfdc27458ea47bfcb311cf47028f17d8154a8bf7d689861d46399230a
         dest-filename: yt-dlp
+
       - type: file
-        url: https://github.com/yt-dlp/yt-dlp/releases/download/2026.03.17/yt-dlp_linux_aarch64
+        url: https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp_linux_aarch64
         only-arches: [aarch64]
-        sha256: 6bfa19736181da9e2e066f9c767da2f24fdcc5e148fa5034d1feb09132f89ad5
+        sha256: b16e4dab368a816cd05d477d698a605a6ae87ccee1c8ffd38fa21d7254141fcc
         dest-filename: yt-dlp
+
+  - name: quickjs-ng
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 qjs-linux-* /app/bin/qjs
+    sources:
+      - type: file
+        url: https://github.com/quickjs-ng/quickjs/releases/download/v0.16.2/qjs-linux-x86_64
+        only-arches: [x86_64]
+        sha256: c5e1b16adfa36def7ac523d6ba54edc77ef66a4dfd65d73e6eae19025f9b7b0a
+
+      - type: file
+        url: https://github.com/quickjs-ng/quickjs/releases/download/v0.16.2/qjs-linux-aarch64
+        only-arches: [aarch64]
+        sha256: 5fb05fd4e81f26c0039f7166ed9af1050968a0e252c981c461a6aa3376244e6b
+
   - name: jasmine
     buildsystem: cmake-ninja
     config-opts:
@@ -45,5 +62,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/alamahant/Jasmine.git
-        tag: v1.3.4
-        commit: df15aac9904143c38236d409733640abbe317041
+        tag: v1.3.5
+        commit: dddfd731b0a4b8320591dc81620573db4cfddfb2
